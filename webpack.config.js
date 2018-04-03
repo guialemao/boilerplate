@@ -9,7 +9,7 @@ const extractPlugin = new ExtractTextPlugin({ filename: './assets/css/app.css' }
 module.exports = {
   context: path.resolve(__dirname, 'src'),
   entry: {
-    app: './app.js'
+    app: './app'
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -23,16 +23,22 @@ module.exports = {
     open: true,
   },
   devtool: 'inline-source-map',
+  resolve: {
+    extensions: ['.js', '.jsx', '.scss'],
+    alias: {
+      SCSS: path.resolve(__dirname,'src/assets/scss')
+    }
+  },
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.jsx?$/,
         include: /src/,
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",
           options: {
-            presets: ['env']
+            presets: ['env', 'react']
           } 
         }
       }, 
