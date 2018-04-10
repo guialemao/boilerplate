@@ -26,7 +26,8 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx', '.scss'],
     alias: {
-      SCSS: path.resolve(__dirname,'src/assets/scss')
+      SCSS: path.resolve(__dirname,'src/assets/scss'),
+      JS: path.resolve(__dirname,'src/assets/js')
     }
   },
   module: {

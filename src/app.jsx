@@ -2,9 +2,8 @@ import 'SCSS/app.scss';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Title from './assets/js/Title';
-import AddTask from './assets/js/AddTask';
-import Listage from './assets/js/Listage';
+import Title from 'JS/Title';
+import TaskContainer from 'JS/TaskContainer';
 
 
 class ToDo extends React.Component {
@@ -12,8 +11,7 @@ class ToDo extends React.Component {
     return (
       <div>
         <Title title="ToDo List Example" />
-        <AddTask />
-        <Listage />
+        <TaskContainer />
       </div>
     )
   }
