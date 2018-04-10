@@ -12,6 +12,10 @@ yarn-error.log*
 # Runtime data
 pids
 *.pid
+
+.vscode
+.DS_Store
+
 *.seed
 *.pid.lock
 
