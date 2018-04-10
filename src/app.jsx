@@ -13,6 +13,7 @@ class ToDo extends React.Component {
       <div>
         <Title title="ToDo List Example" />
         <AddTask />
+        <Listage />
       </div>
     )
   }

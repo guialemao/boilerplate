@@ -6,14 +6,20 @@ class Listage extends React.Component {
     super();
 
     this.state = {
-      task: 'Fazer compras'
+      tasks: [
+        'Ir ao mercado',
+        'Levar o Joaquim no pediatra',
+        'Ir na fisioterapia'
+      ]
     }
   }
 
   render() {
     return(
       <div>
-        {this.state.task}
+        <ul>
+          {this.state.tasks.map((task, id) => <li key={id}>{task}</li>)}
+        </ul>
       </div>
     )
   }
