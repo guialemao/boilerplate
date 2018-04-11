@@ -7,7 +7,7 @@ class Listage extends React.Component {
       <div>
         <h2>Tasks</h2>
         <ul>
-          {this.props.item.map((task, id) => <li key={id}>{task}</li>)}
+          {this.props.item.map((task, id) => <li key={id}>{task.title}</li>)}
         </ul>
       </div>
     )

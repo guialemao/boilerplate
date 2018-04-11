@@ -11,9 +11,18 @@ class TaskContainer extends React.Component {
 
     this.state = {
       tasks: [
-        'Ir ao mercado',
-        'Levar o Joaquim no pediatra',
-        'Ir na fisioterapia'
+        {
+          title: 'Ir ao mercado',
+          status: true
+        },
+        {
+          title: 'Levar o Joaquim no pediatra',
+          status: true
+        },
+        {
+          title: 'Ir na fisioterapia',
+          status: true
+        }
       ]
     }
 
@@ -21,8 +30,11 @@ class TaskContainer extends React.Component {
   }
 
   addTask(task) {
+    console.log(task)
     this.setState((state) => ({
-      friends: state.tasks.concat([task])
+      tasks: [
+        ...state.tasks, task
+      ]
     }))
   }
 
