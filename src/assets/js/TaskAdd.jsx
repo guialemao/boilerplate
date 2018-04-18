@@ -13,7 +13,6 @@ class TaskAdd extends React.Component {
     }
 
     this.updateTitle = this.updateTitle.bind(this);
-
     this.handleAddNewTask = this.handleAddNewTask.bind(this);
   }
 
@@ -45,16 +44,20 @@ class TaskAdd extends React.Component {
 
   render() {
     return (
-      <div>
-        <h3>Add your task</h3>
-        <div>
-          Title: <input type="text" value={this.state.newTask.title}
+      <div className="task-info">
+        <h2>Add your task</h2>
+        <div className="row-form">
+        <input type="text" placeholder="Task Title" id="task-title" className="input-txt" value={this.state.newTask.title}
             onChange={this.updateTitle} />
         </div>
-        <div>
-          Status: Done<input onChange={() => this.updateStatus()} id="done" type="checkbox" />
+        <div className="row-form">
+          <label htmlFor="">This task is done?</label>
+          <input onChange={() => this.updateStatus()} id="done" type="checkbox" checked={this.state.newTask.status} />Yes
         </div>
-        <button onClick={this.handleAddNewTask}>Ok</button>
+        <div className="row-form">
+          <button className="btn" onClick={this.handleAddNewTask}>Add</button>
+        </div>  
+        
       </div>
     )
   }

@@ -1,5 +1,23 @@
-@import '_colors';
+@import 'settings/_reset';
+@import 'settings/_variables';
+@import 'mixins/_box-shadow';
+
+@import 'components/_titles';
+@import 'components/_buttons';
+@import 'components/_card';
+@import 'components/_form';
+@import 'components/_listage';
+
+@import 'modules/_task-info';
 
 body {
-  background: $bgcolor;
+  background: $grey;
+  font-family: $main-font;
+  font-size: 16px;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 960px;
+  width: 100%;
 }

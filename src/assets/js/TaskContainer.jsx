@@ -23,14 +23,14 @@ class TaskContainer extends React.Component {
           title: 'Ir na fisioterapia',
           status: true
         }
-      ]
+      ],
+      visibleTasks: []
     }
 
     this.addTask = this.addTask.bind(this);
   }
 
   addTask(task) {
-    console.log(task)
     this.setState((state) => ({
       tasks: [
         ...state.tasks, task
@@ -40,7 +40,7 @@ class TaskContainer extends React.Component {
 
   render() {
     return(
-      <div>
+      <div className="card">
         <TaskAdd addNew={this.addTask} />
         <Listage item={this.state.tasks} />
       </div>

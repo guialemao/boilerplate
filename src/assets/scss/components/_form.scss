@@ -1,0 +1,14 @@
+.row-form {
+  margin-bottom: 10px;
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .input-txt {
+    border: 1px solid $light-grey;
+    height: 30px;
+    padding: 15px;
+  }
+}

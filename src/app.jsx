@@ -10,8 +10,10 @@ class ToDo extends React.Component {
   render() {
     return (
       <div>
-        <Title title="ToDo List Example" />
-        <TaskContainer />
+        <div className="wrapper">
+          <Title title="To-Do List Example" />
+          <TaskContainer />
+        </div>
       </div>
     )
   }

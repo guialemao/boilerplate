@@ -1,0 +1,5 @@
+.card {
+  @include box-shadow();
+  background-color: $lightest-color;
+  padding: 30px;
+}
