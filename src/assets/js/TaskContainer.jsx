@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Listage from './Listage';
+import TaskListage from './TaskListage';
 import TaskAdd from './TaskAdd';
+import TaskFilter from './TaskFilter';
 
 class TaskContainer extends React.Component {
 
@@ -17,7 +18,7 @@ class TaskContainer extends React.Component {
         },
         {
           title: 'Levar o Joaquim no pediatra',
-          status: true
+          status: false
         },
         {
           title: 'Ir na fisioterapia',
@@ -42,7 +43,8 @@ class TaskContainer extends React.Component {
     return(
       <div className="card">
         <TaskAdd addNew={this.addTask} />
-        <Listage item={this.state.tasks} />
+        <TaskListage item={this.state.tasks} />
+        <TaskFilter />
       </div>
     )
   }
