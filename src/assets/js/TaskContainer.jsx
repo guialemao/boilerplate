@@ -7,8 +7,8 @@ import TaskFilter from './TaskFilter';
 
 class TaskContainer extends React.Component {
 
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       tasks: [
@@ -38,6 +38,15 @@ class TaskContainer extends React.Component {
         ...state.tasks, task
       ]
     }))
+  }
+
+  componentDidMount() {
+    this.setState = {
+      visibleTasks: this.state.tasks
+    }
+    console.log(this.state.visibleTasks)
+    console.log(this.setState.visibleTasks)
+
   }
 
   handleFilter(e) {
