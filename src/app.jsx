@@ -11,8 +11,7 @@ class ToDo extends React.Component {
     return (
       <div>
         <div className="wrapper">
-          <Title title="To-Do List Example" />
-          <TaskContainer />
+          <Title title="Webpack Boilerplate" />
         </div>
       </div>
     )
